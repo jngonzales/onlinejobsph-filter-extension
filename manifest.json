@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "OLJ Signal Filter",
+  "version": "0.1.0",
+  "description": "Local, read-only filtering for useful OnlineJobs.ph coding jobs.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.onlinejobs.ph/*",
+    "https://v2.onlinejobs.ph/*"
+  ],
+  "action": {
+    "default_title": "OLJ Signal Filter",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.onlinejobs.ph/jobseekers/search/*",
+        "https://v2.onlinejobs.ph/jobseekers/search/*"
+      ],
+      "js": [
+        "src/scoring.js",
+        "src/parser.js",
+        "src/content.js"
+      ],
+      "css": ["src/content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

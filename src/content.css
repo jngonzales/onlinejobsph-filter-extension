@@ -1,0 +1,48 @@
+/* OLJ Signal Filter content overlay */
+.olj-signal-badge {
+  align-items: center;
+  background: #172019;
+  border: 1px solid #4d8d5d;
+  border-radius: 999px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  color: #d9f4dc;
+  display: inline-flex;
+  font: 600 11px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  gap: 7px;
+  margin: 8px 0;
+  padding: 5px 9px;
+  position: relative;
+  z-index: 2;
+}
+
+.olj-signal-badge::before {
+  background: #b7f36b;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+}
+
+.olj-signal-badge[data-state="maybe"] {
+  border-color: #b68d42;
+  color: #ffedbd;
+}
+
+.olj-signal-badge[data-state="maybe"]::before {
+  background: #f3c768;
+}
+
+.olj-signal-badge[data-state="reject"] {
+  background: #27191b;
+  border-color: #8f4f55;
+  color: #ffd9dc;
+}
+
+.olj-signal-badge[data-state="reject"]::before {
+  background: #ef777f;
+}
+
+.olj-signal-hidden {
+  display: none !important;
+}

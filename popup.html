@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OLJ Signal Filter</title>
+    <link rel="stylesheet" href="src/popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">OLJ / SIGNAL FILTER</p>
+          <h1>Keep the good work.</h1>
+        </div>
+        <span class="read-only">LOCAL · READ ONLY</span>
+      </header>
+
+      <section class="status-card" aria-live="polite">
+        <div class="status-line">
+          <span id="connectionDot" class="status-dot"></span>
+          <span id="connectionStatus">Checking OLJ tab...</span>
+        </div>
+        <div class="metrics">
+          <div><strong id="recommendedCount">-</strong><span>recommended</span></div>
+          <div><strong id="passingCount">-</strong><span>passing</span></div>
+          <div><strong id="hiddenCount">-</strong><span>hidden</span></div>
+        </div>
+      </section>
+
+      <section class="controls" aria-labelledby="controls-title">
+        <div class="section-heading">
+          <h2 id="controls-title">Filter profile</h2>
+          <span>v0.1</span>
+        </div>
+
+        <label class="toggle-row">
+          <span>
+            <strong>Recommended only</strong>
+            <small>Hide weak-fit cards</small>
+          </span>
+          <input id="recommendedOnly" type="checkbox">
+          <i aria-hidden="true"></i>
+        </label>
+
+        <label class="toggle-row">
+          <span>
+            <strong>Strict async</strong>
+            <small>Reject calls, meetings, voice, video</small>
+          </span>
+          <input id="strictAsync" type="checkbox">
+          <i aria-hidden="true"></i>
+        </label>
+
+        <label class="toggle-row">
+          <span>
+            <strong>Show rejected</strong>
+            <small>Keep filtered cards visible for review</small>
+          </span>
+          <input id="showRejected" type="checkbox">
+          <i aria-hidden="true"></i>
+        </label>
+
+        <div class="range-row">
+          <div class="range-label">
+            <span><strong>Minimum fit score</strong><small>Higher means fewer cards</small></span>
+            <output id="minFitValue" for="minFitScore">70</output>
+          </div>
+          <input id="minFitScore" type="range" min="40" max="95" step="5" value="70">
+        </div>
+
+        <div class="work-type-grid">
+          <label><input id="includeGig" type="checkbox"><span>Gig</span></label>
+          <label><input id="includeAny" type="checkbox"><span>Any</span></label>
+          <label><input id="includeFullTime" type="checkbox"><span>Full time</span></label>
+          <label><input id="includePartTime" type="checkbox"><span>Part time</span></label>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button id="deepScan" class="primary" type="button">Deep scan visible</button>
+        <button id="rescan" class="secondary" type="button">Rescan page</button>
+      </section>
+
+      <p id="message" class="message">Open an OnlineJobs.ph search page to begin.</p>
+      <footer>No apply. No messages. No tracking.</footer>
+    </main>
+    <script src="src/popup.js"></script>
+  </body>
+</html>

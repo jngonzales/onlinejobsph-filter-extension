@@ -1,0 +1,34 @@
+[
+  {
+    "title": "React / Next.js developer for a fixed-scope dashboard",
+    "description": "Build a small dashboard from written specs. React, Next.js, TypeScript, Supabase and one API integration. Fixed price with two milestones. Communication is async through chat.",
+    "workType": "Gig",
+    "pay": "$900 fixed",
+    "applicationCredits": 3,
+    "updatedWithinWindow": true
+  },
+  {
+    "title": "Python automation and scraping assistant",
+    "description": "Create a Python scraper and export clean data to CSV. The work is project-based and the client provides target URLs and examples.",
+    "workType": "Any",
+    "pay": "$700 fixed",
+    "applicationCredits": 3,
+    "updatedWithinWindow": true
+  },
+  {
+    "title": "Full-stack developer",
+    "description": "Join daily Zoom calls and attend a weekly meeting. Build a production system for a regulated financial workflow.",
+    "workType": "Full Time",
+    "pay": "$15/hr",
+    "applicationCredits": 3,
+    "updatedWithinWindow": true
+  },
+  {
+    "title": "Customer support virtual assistant",
+    "description": "Answer customer calls and handle support tickets. No coding required.",
+    "workType": "Part Time",
+    "pay": "$5/hr",
+    "applicationCredits": 3,
+    "updatedWithinWindow": true
+  }
+]

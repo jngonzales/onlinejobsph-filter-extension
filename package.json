@@ -1,0 +1,11 @@
+{
+  "name": "onlinejobsph-filter-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local read-only Chrome and Brave extension for ranking useful OnlineJobs.ph jobs.",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "verify": "node scripts/verify-extension.cjs && npm test"
+  }
+}
